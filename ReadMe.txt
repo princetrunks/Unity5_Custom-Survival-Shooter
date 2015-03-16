@@ -38,10 +38,16 @@ These are the following edits/additions that I made in this particular build tha
 
 ———
 
+==Other Design/Coding Notes==
+
+       •The various new controller classes could and should be updated by making better use of tags as oppose to public object references.
+
+———
+
 *Known Bugs
 	•The conversion from Unity 4.x to 5.0 did seem to cause some lighting errors in this project  which I would assume stems from Unity 5.0 now using global baked lighting.  The Environment prefab (only in the Unity editor, not in a PC/MACOSX compiled build) will oddly sometimes either lose it’s GI lighting or in some cases not have any lighting at.  The “fix” is to toggle the Environment as a Static component off and then back on.  Could be something to do with the lightmaps Unity created with the Environment prefab that with Unity 5’s new lighting, are being broken by the new functionality.
-	•In the WebGL build, shadows don’t show and some of the Player’s mesh is warped.  The later could be from edits
-
+	•In the WebGL build, shadows don’t show and some of the Player’s mesh is warped.  The later could be from edits, but could possibly be tweaked with build settings.
+       
 
 —
 Disclaimer:
